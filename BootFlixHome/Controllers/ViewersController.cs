@@ -39,7 +39,8 @@ namespace BootFlixHome.Controllers
             {
                 new Viewer {ID = 1, FirstName = "Themis", LastName = "Sarigiorgis"},
                 new Viewer {ID = 2, FirstName = "Stergios", LastName = "Dimas"},
-                new Viewer {ID = 3, FirstName = "Mixalis", LastName = "Drakakis"}
+                new Viewer {ID = 3, FirstName = "Mixalis", LastName = "Drakakis"},
+                new Viewer {ID = 4, FirstName = "Dionisis", LastName = "Eystathopoulos"}
             };
             
         }
