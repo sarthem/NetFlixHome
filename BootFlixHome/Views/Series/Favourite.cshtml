@@ -1,0 +1,26 @@
+﻿@model BootFlixHome.ViewModels.FavouriteViewModel
+@{
+    ViewBag.Title = "Favourite";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>@Model.Serie.Name</h2>*@
+
+@if (Model.Viewers.Count == 0)
+{
+    <text>There is no Viewers for this Serie</text>
+}
+else
+{
+<h3>The Viewers of @Model.Serie.Name</h3>
+<ul>
+    @foreach (var viewers in Model.Viewers)
+    {
+        <li>@viewers.FirstName, @viewers.LastName</li>
+    }
+
+</ul>
+   
+}
+
+

@@ -170,16 +170,49 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SeriesController.cs" />
+    <Compile Include="Controllers\ViewersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906140120193_InitialModels.cs" />
+    <Compile Include="Migrations\201906140120193_InitialModels.Designer.cs">
+      <DependentUpon>201906140120193_InitialModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906140127230_force.cs" />
+    <Compile Include="Migrations\201906140127230_force.Designer.cs">
+      <DependentUpon>201906140127230_force.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906140131190_AddMembershipType.cs" />
+    <Compile Include="Migrations\201906140131190_AddMembershipType.Designer.cs">
+      <DependentUpon>201906140131190_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906140136417_AddIsSubscribedToNewsLetter.cs" />
+    <Compile Include="Migrations\201906140136417_AddIsSubscribedToNewsLetter.Designer.cs">
+      <DependentUpon>201906140136417_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906140139307_AddMembershipTypeIDToViewer.cs" />
+    <Compile Include="Migrations\201906140139307_AddMembershipTypeIDToViewer.Designer.cs">
+      <DependentUpon>201906140139307_AddMembershipTypeIDToViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906140140398_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201906140140398_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201906140140398_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Serie.cs" />
+    <Compile Include="Models\Viewer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\FavouriteViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-sandstone.css" />
+    <Content Include="Content\bootstrap-SUPERHERO.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -235,6 +268,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Series\Favourite.cshtml" />
+    <Content Include="Views\Viewers\Index.cshtml" />
+    <Content Include="Views\Shared\_NavigationBar.cshtml" />
+    <Content Include="Views\Viewers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +288,26 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906140120193_InitialModels.resx">
+      <DependentUpon>201906140120193_InitialModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906140127230_force.resx">
+      <DependentUpon>201906140127230_force.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906140131190_AddMembershipType.resx">
+      <DependentUpon>201906140131190_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906140136417_AddIsSubscribedToNewsLetter.resx">
+      <DependentUpon>201906140136417_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906140139307_AddMembershipTypeIDToViewer.resx">
+      <DependentUpon>201906140139307_AddMembershipTypeIDToViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906140140398_PopulateMembershipTypes.resx">
+      <DependentUpon>201906140140398_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -19,9 +19,13 @@ namespace BootFlixHome.Models
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
+    {        
+        public DbSet<Viewer> Viewers { get; set; }
+        public DbSet<Serie> Series { get; set; }
+        public DbSet<MembershipType> MembershipTypes { get; set; }
+
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("BootFlixHomeDBContext", throwIfV1Schema: false)
         {
         }
 
